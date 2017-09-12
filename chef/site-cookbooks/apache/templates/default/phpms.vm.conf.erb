@@ -1,0 +1,16 @@
+NameVirtualHost *:80
+<VirtualHost *:80>
+    ServerName eccube.local
+    DocumentRoot /var/www/eccube/html
+
+    <Directory /var/www/eccube/html>
+        Options All
+        AllowOverride All
+        Order allow,deny
+        Allow from all
+   </Directory>
+</VirtualHost>
+<Directory /var/www/eccube/html/>
+	EnableMMAP Off
+	EnableSendfile Off
+</Directory>
